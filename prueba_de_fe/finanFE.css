@@ -13,6 +13,12 @@ html, body {
   background-color: #ffffff;
 }
 
+.titulo-pagina {
+  margin: 0;               
+  margin-left: 15px;     
+  color: white;
+}
+
 .menu {
   background-color: #105424;
   display: flex;
@@ -21,6 +27,19 @@ html, body {
   padding: 0px 1px;
   height: 100px;
   border: 3px solid black;
+}
+
+.menu nav {
+  margin-left: auto;
+}
+
+.menu nav ul {
+  display: flex;         
+  align-items: center;   
+  list-style: none;      
+  margin: 0;
+  padding: 0;
+  gap: 10px;
 }
 
 .menu .logo {
