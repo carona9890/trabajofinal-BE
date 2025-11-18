@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Transferencia de dinero</title>
+  <link rel="stylesheet" href="finanFE.css" />
+</head>
+<body>
+
+  <header class="menu">
+    <img src="ojo_logo.png" alt="Logo-principal" class="logo">
+    <nav>
+      <ul>
+        <li><a href="#">Nombre de usuario</a></li>
+        <img src="usuario.png" alt="Logo_usuario" class="logo-usuario">
+      </ul>
+    </nav>
+  </header>
+
+  <div class="contenedor">
+    <aside class="sidebar">
+      <img src="logoside_1.png" alt="Logo-lateral" class="logo-sidebar"onclick="window.location.href='http://127.0.0.1:5500/inicio.html'">
+      <img src="ahorro.png" alt="Logo-lateral2" class="logo-sidebar"onclick="window.location.href='http://127.0.0.1:5500/ahorros.html'">
+      <img src="transferencia.png" alt="Logo-lateral3" class="logo-sidebar" onclick="window.location.href='http://127.0.0.1:5500/transferir.html'">
+    </aside>
+
+    <section class="contenido">
+      <h1>Ahorros</h1>
+      <div class="fila">
+      <p id="texto_transferir">Transferir</p>
+      <p id="texto_retirar">Retirar</p>
+      </div>
+      <div class="fila_boton">
+      <h2 id="boton_transferir" onclick="alert('Tu alias es (pablinpablito)')">-</h2>
+      <h3 id="boton_pagofacil" onclick="alert('Tu codigo de Pagofacil es 49422945')" class="logo-tran"><img src="pagofacil.jpeg" class="logo-tran"></h3>
+      <h4 id="boton_retirar" class="boton_lejos">-</h4>
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>
