@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ahorros</title>
+  <title>Meta de ahorros</title>
   <link rel="stylesheet" href="finanFE.css" />
 </head>
 <body>
@@ -27,23 +27,22 @@
     </aside>
 
     <section class="contenido">
-      <h1>Ahorros</h1>
-      <p id="texto_ahorros">Asigne la fecha y dinero para su meta</p>
-      <div class="fila_ahorros">
-      <input type="date" id="fecha">
-      <input type="number" id="dinero_meta" placeholder="Ingrese monto">
-      <h2 id="boton_ahorros">Empezar meta</h2>
+      <div class="fila_meta_activa">
+      <h1>La meta de ahorroterminara el:</h1>
+      <h2 id="fecha_mostrar"></h2>
+      <h3 id="boton_cancelar" onclick="window.location.href='http://127.0.0.1:5500/ahorros.html'">Cancelar meta</h3>
       </div>
+      <script>
+      const fechaGuardada = localStorage.getItem("fecha_meta");
+      const montoGuardado = localStorage.getItem("monto_meta");
+
+      if (fechaGuardada) {
+      const fechaFormato = new Date(fechaGuardada).toLocaleDateString("es-AR");
+      document.getElementById("fecha_mostrar").innerText = fechaFormato;
+      }
+      </script>
     </section>
-      </div>
-    <script>
-  document.getElementById("boton_ahorros").onclick = function () {
-    const fecha = document.getElementById("fecha").value;
-    const monto = document.getElementById("dinero_meta").value;
-    localStorage.setItem("fecha_meta", fecha);
-    localStorage.setItem("monto_meta", monto);
-    window.location.href = "ahorros_meta_activa.html";
-  };
-    </script>
+
+  </div>
 </body>
 </html>

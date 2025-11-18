@@ -202,3 +202,25 @@ html, body {
 .logo-tran{ 
   height: auto;  
 }
+
+.fila_meta_activa {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;  
+  justify-content: center;
+  gap: 15px;
+}
+
+#boton_cancelar{
+  text-align: center;
+  width: 60px;
+  font-size: 12px;
+  background-color: #d60a0a;
+  color: #000000;
+  border: 3px solid black;
+}
+
+#boton_cancelar:hover {
+  background-color: #e44949;
+  color: #0c0c0c;
+}
