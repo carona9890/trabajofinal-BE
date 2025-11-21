@@ -21,22 +21,38 @@
 
   <div class="contenedor">
     <aside class="sidebar">
-      <img src="logoside_1.png" alt="Logo-lateral" class="logo-sidebar"onclick="window.location.href='http://127.0.0.1:5500/inicio.html'">
-      <img src="ahorro.png" alt="Logo-lateral2" class="logo-sidebar"onclick="window.location.href='http://127.0.0.1:5500/ahorros.html'">
-      <img src="transferencia.png" alt="Logo-lateral3" class="logo-sidebar" onclick="window.location.href='http://127.0.0.1:5500/transferir.html'">
+      <img src="logoside_1.png" alt="Logo-lateral" class="logo-sidebar" onclick="window.location.href='inicio.html'">
+      <img src="ahorro.png" alt="Logo-lateral2" class="logo-sidebar" onclick="window.location.href='ahorros.html'">
+      <img src="transferencia.png" alt="Logo-lateral3" class="logo-sidebar" onclick="window.location.href='transferir.html'">
     </aside>
 
     <section class="contenido">
-      <h1>Ahorros</h1>
-      <div class="fila">
-      <p id="texto_transferir">Transferir</p>
-      <p id="texto_retirar">Retirar</p>
+      <h1>Transferencias</h1>
+      
+      <div class="panel-operaciones">
+        
+        <!-- RENGLÓN 1: TRANSFERIR -->
+        <div class="renglon-simple">
+          <p class="etiqueta-accion">Transferir</p>
+          <div class="grupo-botones">
+             <!-- Usamos div o button en lugar de h2 para mejor control, mantenemos tus IDs -->
+             <div id="boton_transferir" onclick="alert('Tu alias es (pablinpablito)')">-</div>
+             <div id="boton_pagofacil" onclick="alert('Tu codigo de Pagofacil es 49422945')">
+               <img src="pagofacil.jpeg" class="img-boton">
+             </div>
+          </div>
+        </div>
+
+        <!-- RENGLÓN 2: RETIRAR -->
+        <div class="renglon-simple">
+          <p class="etiqueta-accion">Retirar</p>
+          <div class="grupo-botones">
+             <div id="boton_retirar">-</div>
+          </div>
+        </div>
+
       </div>
-      <div class="fila_boton">
-      <h2 id="boton_transferir" onclick="alert('Tu alias es (pablinpablito)')">-</h2>
-      <h3 id="boton_pagofacil" onclick="alert('Tu codigo de Pagofacil es 49422945')" class="logo-tran"><img src="pagofacil.jpeg" class="logo-tran"></h3>
-      <h4 id="boton_retirar" class="boton_lejos">-</h4>
-      </div>
+
     </section>
   </div>
 
