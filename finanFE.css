@@ -134,6 +134,7 @@ html, body {
   font-size: 12px;
   background-color: #328aa5;
   color: #000000;
+  text-align: center;
 }
 
 #boton_ahorros:hover {
@@ -213,12 +214,12 @@ html, body {
   width: 50px;
   height: 50px;
   background-color: #328aa5;
-  color: black;
+  color: #328aa5;
   font-size: 30px; /* El guión más grande */
 }
 
 #boton_pagofacil {
-  width: 60px;
+  width: 120px;
   height: 50px;
   background-color: #f0d05b;
   overflow: hidden; /* Para que la imagen no se salga */
@@ -232,6 +233,7 @@ html, body {
 
 #boton_transferir:hover, #boton_retirar:hover {
   background-color: #869fb8;
+  color: #869fb8;
 }
 
 /* --- MOVIMIENTOS (TARJETAS) --- */
