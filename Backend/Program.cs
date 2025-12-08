@@ -8,7 +8,14 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseSqlServer(
+        builder.Configuration.GetConnectionString("DefaultConnection"),
+        sqlOptions => sqlOptions.EnableRetryOnFailure(
+            maxRetryCount: 5, // Reintentar hasta 5 veces
+            maxRetryDelay: TimeSpan.FromSeconds(30), // Esperar hasta 30 seg entre intentos
+            errorNumbersToAdd: null)
+    ));
+
 
 builder.Services.AddScoped<IAhorroRepository, AhorroRepository>();
 builder.Services.AddScoped<ITransferenciaRepository, TransferenciaRepository>();
