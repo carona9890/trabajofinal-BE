@@ -5,7 +5,7 @@ namespace TrabajoFinalBE.Dtos
     public class CreateAhorroDto
     {
         [Required]
-        public string DescripcionMeta { get; set; }
+        public string? DescripcionMeta { get; set; }
         [Required]
         public decimal MontoObjetivo { get; set; }
         [Required]

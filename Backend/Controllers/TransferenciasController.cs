@@ -8,6 +8,7 @@ using TrabajoFinalBE.Repository;
 
 namespace TrabajoFinalBE.Controllers
 {
+    // Attribute routing para cada uno de los controllers
     [Route("api/[controller]")]
     [ApiController]
     public class TransferenciasController : ControllerBase
@@ -21,6 +22,7 @@ namespace TrabajoFinalBE.Controllers
             _mapper = mapper;
         }
 
+        // GET de transferencias
         [HttpGet]
         public async Task<IActionResult> GetTransferencias()
         {
@@ -29,6 +31,7 @@ namespace TrabajoFinalBE.Controllers
             return Ok(listaTransDto);
         }
 
+        // Obtenemos el id de dicha transferencia
         [HttpGet("{id}", Name = "GetTransferencia")]
         public async Task<IActionResult> GetTransferencia(int id)
         {
@@ -41,6 +44,7 @@ namespace TrabajoFinalBE.Controllers
             return Ok(itemTransDto);
         }
 
+        // POST de transferencia
         [HttpPost]
         public async Task<IActionResult> CrearTransferencia([FromBody] CreateTransferenciaDto createTransDto)
         {

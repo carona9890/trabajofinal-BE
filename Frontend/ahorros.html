@@ -21,7 +21,6 @@
 
   <div class="contenedor">
     <aside class="sidebar">
-      <!-- He cambiado los links a relativos para que funcionen mejor, puedes volver a poner http://... si prefieres -->
       <img src="logoside_1.png" alt="Logo-lateral" class="logo-sidebar" onclick="window.location.href='inicio.html'">
       <img src="ahorro.png" alt="Logo-lateral2" class="logo-sidebar" onclick="window.location.href='ahorros.html'">
       <img src="transferencia.png" alt="Logo-lateral3" class="logo-sidebar" onclick="window.location.href='transferir.html'">
@@ -39,6 +38,8 @@
   </div>
 
   <script>
+
+    // Documento de ahorros
     document.getElementById("boton_ahorros").onclick = function () {
       const fechaMeta = document.getElementById("fecha").value;
       const monto = document.getElementById("dinero_meta").value;
@@ -52,7 +53,7 @@
       localStorage.setItem("fecha_meta", fechaMeta);
       localStorage.setItem("monto_meta", monto);
       
-      // IMPORTANTE: Guardamos la fecha de hoy como fecha de inicio
+      // y el inicio de la fecha 
       const fechaInicio = new Date().toISOString().split('T')[0];
       localStorage.setItem("fecha_inicio", fechaInicio);
 

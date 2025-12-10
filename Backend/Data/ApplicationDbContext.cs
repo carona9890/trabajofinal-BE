@@ -13,6 +13,8 @@ namespace TrabajoFinalBE.Data
         public DbSet<Ahorro> Ahorros { get; set; }
         public DbSet<Transferencia> Transferencias { get; set; }
 
+        // Override para configurar las relaciones entre tablas.
+        // Necesario para que corran cuando llame en postman.
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

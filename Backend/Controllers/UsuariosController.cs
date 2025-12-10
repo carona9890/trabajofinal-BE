@@ -6,6 +6,8 @@ using TrabajoFinalBE.Models;
 
 namespace TrabajoFinalBE.Controllers
 {
+
+    // Attribute routing para cada uno de los controllers
     [Route("api/[controller]")]
     [ApiController]
     public class UsuariosController : ControllerBase
@@ -17,6 +19,7 @@ namespace TrabajoFinalBE.Controllers
             _context = context;
         }
 
+        // POST de usuarios
         [HttpPost]
         public async Task<ActionResult<Usuario>> PostUsuario(CreateUsuarioDto createDto)
         {
@@ -33,6 +36,7 @@ namespace TrabajoFinalBE.Controllers
             return CreatedAtAction(nameof(GetUsuario), new { id = usuario.Id }, usuario);
         }
 
+        // GET de usuarios
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Usuario>>> GetUsuarios()
         {

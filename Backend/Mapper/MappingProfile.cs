@@ -4,6 +4,8 @@ using TrabajoFinalBE.Models;
 
 namespace TrabajoFinalBE.Mappers
 {
+
+    // DependencyInjection utilizado para el mapper.
     public class MappingProfile : Profile
     {
         public MappingProfile()

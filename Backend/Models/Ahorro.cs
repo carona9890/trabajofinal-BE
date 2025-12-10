@@ -8,7 +8,7 @@ namespace TrabajoFinalBE.Models
         [Key]
         public int Id { get; set; }
         [Required]
-        public string DescripcionMeta { get; set; }
+        public string? DescripcionMeta { get; set; }
         [Column(TypeName = "decimal(18,2)")]
         public decimal MontoObjetivo { get; set; }
         [Column(TypeName = "decimal(18,2)")]
@@ -16,6 +16,6 @@ namespace TrabajoFinalBE.Models
         public bool EsActiva { get; set; }
         public int UsuarioId { get; set; }
         [ForeignKey("UsuarioId")]
-        public Usuario Usuario { get; set; }
+        public Usuario? Usuario { get; set; }
     }
 }

@@ -8,12 +8,12 @@ namespace TrabajoFinalBE.Models
         [Key]
         public int Id { get; set; }
         [Required]
-        public string Nombre { get; set; }
+        public string? Nombre { get; set; }
         [Required]
-        public string Email { get; set; }
+        public string? Email { get; set; }
         [Required]
-        public string Password { get; set; }
-        public List<Ahorro> Ahorros { get; set; }
-        public List<Transferencia> Transferencias { get; set; }
+        public string? Password { get; set; }
+        public List<Ahorro> Ahorros { get; set; } = null!;
+        public List<Transferencia> Transferencias { get; set; } = null!;
     }
 }

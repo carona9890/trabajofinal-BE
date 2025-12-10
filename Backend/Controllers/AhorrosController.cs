@@ -8,6 +8,7 @@ using TrabajoFinalBE.Repository;
 
 namespace TrabajoFinalBE.Controllers
 {
+    // Attribute routing para cada uno de los controllers
     [Route("api/[controller]")]
     [ApiController]
     public class AhorrosController : ControllerBase
@@ -21,6 +22,7 @@ namespace TrabajoFinalBE.Controllers
             _mapper = mapper;
         }
 
+        // GET para ahorros
         [HttpGet]
         public async Task<IActionResult> GetAhorros()
         {
@@ -29,6 +31,7 @@ namespace TrabajoFinalBE.Controllers
             return Ok(listaAhorrosDto);
         }
 
+        // Obtenemos el id del ahorro
         [HttpGet("{id}", Name = "GetAhorro")]
         public async Task<IActionResult> GetAhorro(int id)
         {
@@ -41,6 +44,7 @@ namespace TrabajoFinalBE.Controllers
             return Ok(itemAhorroDto);
         }
 
+        // POST para ahorros
         [HttpPost]
         public async Task<IActionResult> CrearAhorro([FromBody] CreateAhorroDto createAhorroDto)
         {
@@ -62,6 +66,7 @@ namespace TrabajoFinalBE.Controllers
             return CreatedAtRoute("GetAhorro", new { id = ahorro.Id }, ahorro);
         }
 
+        // Patch para modificar montos
         [HttpPatch("{id}")]
         public async Task<IActionResult> ActualizarMonto(int id, [FromBody] decimal nuevoMonto)
         {
@@ -82,6 +87,7 @@ namespace TrabajoFinalBE.Controllers
             return NoContent();
         }
 
+        // El DELETE del id para el ahorro seleccionado
         [HttpDelete("{id}")]
         public async Task<IActionResult> BorrarAhorro(int id)
         {

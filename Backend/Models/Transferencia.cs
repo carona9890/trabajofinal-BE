@@ -9,13 +9,13 @@ namespace TrabajoFinalBE.Models
         [Key]
         public int Id { get; set; }
         [Required]
-        public string Destinatario { get; set; }
+        public string? Destinatario { get; set; }
         [Column(TypeName = "decimal(18,2)")]
         public decimal Monto { get; set; }
         public DateTime Fecha { get; set; }
-        public string Concepto { get; set; }
+        public string? Concepto { get; set; }
         public int UsuarioId { get; set; }
         [ForeignKey("UsuarioId")]
-        public Usuario Usuario { get; set; }
+        public Usuario? Usuario { get; set; }
     }
 }
